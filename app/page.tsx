@@ -1,7 +1,12 @@
+import Test from "./components/Test";
+import WordsList from "./components/WordsList";
+
 export default function Home() {
   return (
     <div className="flex flex-row justify-between ">
-      <p className="text-red-500">1</p> <p>2</p>
+      <p>hbhbhb</p>
+      <WordsList />
+      <Test />
     </div>
   );
 }
