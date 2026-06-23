@@ -1,0 +1,602 @@
+[
+  {
+    "word": "analyze",
+    "meaning": "examine methodically and in detail for explanation or interpretation",
+    "date": "2026-06-23",
+    "time": "13:15"
+  },
+  {
+    "word": "integrate",
+    "meaning": "combine one thing with another so that they become a whole",
+    "date": "2026-06-23",
+    "time": "14:00"
+  },
+  {
+    "word": "coordinate",
+    "meaning": "bring the different elements of a complex activity into an efficient relationship",
+    "date": "2026-06-23",
+    "time": "14:45"
+  },
+  {
+    "word": "formulate",
+    "meaning": "create or prepare something methodically",
+    "date": "2026-06-23",
+    "time": "15:30"
+  },
+  {
+    "word": "execute",
+    "meaning": "carry out or put into effect a plan, order, or course of action",
+    "date": "2026-06-23",
+    "time": "16:15"
+  },
+  {
+    "word": "consolidate",
+    "meaning": "combine a number of things into a single more effective or coherent whole",
+    "date": "2026-06-24",
+    "time": "09:00"
+  },
+  {
+    "word": "validate",
+    "meaning": "check or prove the validity or accuracy of something",
+    "date": "2026-06-24",
+    "time": "09:40"
+  },
+  {
+    "word": "delegate",
+    "meaning": "entrust a task or responsibility to another person",
+    "date": "2026-06-24",
+    "time": "10:15"
+  },
+  {
+    "word": "innovate",
+    "meaning": "make changes in something established, especially by introducing new methods",
+    "date": "2026-06-24",
+    "time": "11:00"
+  },
+  {
+    "word": "customize",
+    "meaning": "modify something to suit a particular individual or task",
+    "date": "2026-06-24",
+    "time": "11:35"
+  },
+  {
+    "word": "expedite",
+    "meaning": "make an action or process happen sooner or be accomplished more quickly",
+    "date": "2026-06-24",
+    "time": "13:00"
+  },
+  {
+    "word": "facilitate",
+    "meaning": "make an action or process easy or easier",
+    "date": "2026-06-24",
+    "time": "13:45"
+  },
+  {
+    "word": "negotiate",
+    "meaning": "try to reach an agreement or compromise by discussion with others",
+    "date": "2026-06-24",
+    "time": "14:30"
+  },
+  {
+    "word": "pioneer",
+    "meaning": "develop or be among the first to use or apply a new method or area of knowledge",
+    "date": "2026-06-24",
+    "time": "15:15"
+  },
+  {
+    "word": "diversify",
+    "meaning": "enlarge or vary the range of products, fields, or activities",
+    "date": "2026-06-24",
+    "time": "16:00"
+  },
+  {
+    "word": "standardize",
+    "meaning": "cause something to conform to a standard",
+    "date": "2026-06-25",
+    "time": "09:10"
+  },
+  {
+    "word": "spearhead",
+    "meaning": "lead an attack, movement, or public endeavor",
+    "date": "2026-06-25",
+    "time": "09:55"
+  },
+  {
+    "word": "diagnose",
+    "meaning": "identify the nature of a problem or illness by examination of the symptoms",
+    "date": "2026-06-25",
+    "time": "10:40"
+  },
+  {
+    "word": "revitalize",
+    "meaning": "imbue something with new life and vitality",
+    "date": "2026-06-25",
+    "time": "11:20"
+  },
+  {
+    "word": "scrutinize",
+    "meaning": "examine or inspect closely and thoroughly",
+    "date": "2026-06-25",
+    "time": "13:05"
+  },
+  {
+    "word": "forecast",
+    "meaning": "predict or estimate a future event or trend",
+    "date": "2026-06-25",
+    "time": "13:50"
+  },
+  {
+    "word": "cultivate",
+    "meaning": "try to acquire or develop a quality, sentiment, or skill",
+    "date": "2026-06-25",
+    "time": "14:35"
+  },
+  {
+    "word": "advocate",
+    "meaning": "publicly recommend or support a particular cause or policy",
+    "date": "2026-06-25",
+    "time": "15:15"
+  },
+  {
+    "word": "mobilize",
+    "meaning": "organize and encourage a group of people to take collective action",
+    "date": "2026-06-25",
+    "time": "16:00"
+  },
+  {
+    "word": "reconcile",
+    "meaning": "make one view or belief compatible with another",
+    "date": "2026-06-26",
+    "time": "09:00"
+  },
+  {
+    "word": "augment",
+    "meaning": "make something greater by adding to it; increase",
+    "date": "2026-06-26",
+    "time": "09:45"
+  },
+  {
+    "word": "demystify",
+    "meaning": "make a difficult subject clearer and easier to understand",
+    "date": "2026-06-26",
+    "time": "10:30"
+  },
+  {
+    "word": "architect",
+    "meaning": "design and configure a complex system, structure, or plan",
+    "date": "2026-06-26",
+    "time": "11:15"
+  },
+  {
+    "word": "modernize",
+    "meaning": "adapt something to modern needs or habits, typically by installing modern equipment",
+    "date": "2026-06-26",
+    "time": "13:00"
+  },
+  {
+    "word": "orchestrate",
+    "meaning": "plan or coordinate elements of a situation to produce a desired effect",
+    "date": "2026-06-26",
+    "time": "13:50"
+  },
+  {
+    "word": "catalyze",
+    "meaning": "cause or accelerate a reaction, change, or action",
+    "date": "2026-06-26",
+    "time": "14:40"
+  },
+  {
+    "word": "centralize",
+    "meaning": "concentrate control of an activity or organization under a single authority",
+    "date": "2026-06-26",
+    "time": "15:20"
+  },
+  {
+    "word": "decentralize",
+    "meaning": "transfer authority from central to local government or branches",
+    "date": "2026-06-26",
+    "time": "16:05"
+  },
+  {
+    "word": "calibrate",
+    "meaning": "adjust experimental results or values to take external factors into account",
+    "date": "2026-06-29",
+    "time": "09:00"
+  },
+  {
+    "word": "benchmark",
+    "meaning": "evaluate or check something by comparison with a standard",
+    "date": "2026-06-29",
+    "time": "09:40"
+  },
+  {
+    "word": "quantify",
+    "meaning": "express or measure the quantity of something",
+    "date": "2026-06-29",
+    "time": "10:20"
+  },
+  {
+    "word": "conceptualize",
+    "meaning": "form a concept or idea of something",
+    "date": "2026-06-29",
+    "time": "11:00"
+  },
+  {
+    "word": "leverage",
+    "meaning": "use something to maximum advantage",
+    "date": "2026-06-29",
+    "time": "11:45"
+  },
+  {
+    "word": "mitigate",
+    "meaning": "make less severe, serious, or painful",
+    "date": "2026-06-29",
+    "time": "13:10"
+  },
+  {
+    "word": "optimize",
+    "meaning": "re-engineer to achieve the highest possible efficiency or performance",
+    "date": "2026-06-29",
+    "time": "14:00"
+  },
+  {
+    "word": "override",
+    "meaning": "use one's authority to reject or cancel a decision, view, or automatic function",
+    "date": "2026-06-29",
+    "time": "14:50"
+  },
+  {
+    "word": "refine",
+    "meaning": "make minor changes so as to improve or clarify something",
+    "date": "2026-06-29",
+    "time": "15:30"
+  },
+  {
+    "word": "supersede",
+    "meaning": "take the place of a person or thing previously in authority or use",
+    "date": "2026-06-29",
+    "time": "16:15"
+  },
+  {
+    "word": "validate",
+    "meaning": "confirm the legal or official status of an operational protocol",
+    "date": "2026-06-30",
+    "time": "09:15"
+  },
+  {
+    "word": "systematize",
+    "meaning": "arrange according to an organized system or plan",
+    "date": "2026-06-30",
+    "time": "10:00"
+  },
+  {
+    "word": "harmonize",
+    "meaning": "bring into consonance or accord",
+    "date": "2026-06-30",
+    "time": "10:45"
+  },
+  {
+    "word": "restructure",
+    "meaning": "organize differently, especially for greater efficiency or cost savings",
+    "date": "2026-06-30",
+    "time": "11:30"
+  },
+  {
+    "word": "pioneer",
+    "meaning": "open up a road or track as a trailblazer for subsequent efforts",
+    "date": "2026-06-30",
+    "time": "13:00"
+  },
+  {
+    "word": "differentiate",
+    "meaning": "recognize or ascertain what makes someone or something distinct",
+    "date": "2026-06-30",
+    "time": "13:45"
+  },
+  {
+    "word": "synthesize",
+    "meaning": "produce a substance or text by combining chemical elements or separate concepts",
+    "date": "2026-06-30",
+    "time": "14:30"
+  },
+  {
+    "word": "maximize",
+    "meaning": "make as large or great as possible",
+    "date": "2026-06-30",
+    "time": "15:15"
+  },
+  {
+    "word": "minimize",
+    "meaning": "reduce something, especially something unwanted, to the smallest possible amount",
+    "date": "2026-06-30",
+    "time": "16:00"
+  },
+  {
+    "word": "scrutinize",
+    "meaning": "conduct a critical and disciplined forensic investigation",
+    "date": "2026-07-01",
+    "time": "09:00"
+  },
+  {
+    "word": "amplify",
+    "meaning": "increase the volume, strength, or scope of a signal or initiative",
+    "date": "2026-07-01",
+    "time": "09:40"
+  },
+  {
+    "word": "diversify",
+    "meaning": "spread investment or asset allocation across various financial sectors",
+    "date": "2026-07-01",
+    "time": "10:20"
+  },
+  {
+    "word": "automate",
+    "meaning": "convert a process to be operated by mechanical or electronic devices",
+    "date": "2026-07-01",
+    "time": "11:00"
+  },
+  {
+    "word": "digitize",
+    "meaning": "convert pictures, sound, or text into a digital form that can be processed by a computer",
+    "date": "2026-07-01",
+    "time": "11:40"
+  },
+  {
+    "word": "transition",
+    "meaning": "change or cause to change from one state or condition to another",
+    "date": "2026-07-01",
+    "time": "13:00"
+  },
+  {
+    "word": "overhaul",
+    "meaning": "take apart a piece of machinery or a system in order to examine and repair it",
+    "date": "2026-07-01",
+    "time": "13:50"
+  },
+  {
+    "word": "formulate",
+    "meaning": "express an idea or theory in a concise and systematic algebraic or verbal way",
+    "date": "2026-07-01",
+    "time": "14:40"
+  },
+  {
+    "word": "re-engineer",
+    "meaning": "change and improve the design of a product or system fundamentally",
+    "date": "2026-07-01",
+    "time": "15:30"
+  },
+  {
+    "word": "streamline",
+    "meaning": "design or provide with a form that presents very little resistance to flow",
+    "date": "2026-07-01",
+    "time": "16:10"
+  },
+  {
+    "word": "unify",
+    "meaning": "make or become united, uniform, or whole",
+    "date": "2026-07-02",
+    "time": "09:15"
+  },
+  {
+    "word": "disrupt",
+    "meaning": "drastically alter or destroy the structure of something by introducing extreme innovation",
+    "date": "2026-07-02",
+    "time": "10:00"
+  },
+  {
+    "word": "integrate",
+    "meaning": "find the total value of a data set by summing parts or connecting systems",
+    "date": "2026-07-02",
+    "time": "10:45"
+  },
+  {
+    "word": "collaborate",
+    "meaning": "cooperate treasonably with an enemy, or construct a joint intellectual venture",
+    "date": "2026-07-02",
+    "time": "11:30"
+  },
+  {
+    "word": "customize",
+    "meaning": "build, fit, or alter according to individual specifications",
+    "date": "2026-07-02",
+    "time": "13:10"
+  },
+  {
+    "word": "tailor",
+    "meaning": "make or adapt for a particular purpose or person",
+    "date": "2026-07-02",
+    "time": "13:55"
+  },
+  {
+    "word": "realign",
+    "meaning": "change or restore something to a different or former position or state",
+    "date": "2026-07-02",
+    "time": "14:40"
+  },
+  {
+    "word": "allocate",
+    "meaning": "distribute resources or duties for a particular purpose",
+    "date": "2026-07-02",
+    "time": "15:25"
+  },
+  {
+    "word": "audit",
+    "meaning": "conduct an official financial or procedural inspection of an organization",
+    "date": "2026-07-02",
+    "time": "16:10"
+  },
+  {
+    "word": "authorize",
+    "meaning": "give official permission for or approval to an undertaking",
+    "date": "2026-07-03",
+    "time": "09:00"
+  },
+  {
+    "word": "catalyze",
+    "meaning": "inspire or accelerate a crucial social, political, or economic transformation",
+    "date": "2026-07-03",
+    "time": "09:45"
+  },
+  {
+    "word": "champion",
+    "meaning": "vigorously support or defend a cause or project",
+    "date": "2026-07-03",
+    "time": "10:30"
+  },
+  {
+    "word": "clarify",
+    "meaning": "make a statement or situation less confusing and more comprehensible",
+    "date": "2026-07-03",
+    "time": "11:15"
+  },
+  {
+    "word": "compile",
+    "meaning": "produce a list or book by assembling material collected from other sources",
+    "date": "2026-07-03",
+    "time": "13:00"
+  },
+  {
+    "word": "critique",
+    "meaning": "evaluate a theory or practice in a detailed and analytical way",
+    "date": "2026-07-03",
+    "time": "13:45"
+  },
+  {
+    "word": "define",
+    "meaning": "state or describe exactly the nature, scope, or meaning of something",
+    "date": "2026-07-03",
+    "time": "14:30"
+  },
+  {
+    "word": "deploy",
+    "meaning": "bring resources, systems, or military assets into effective action",
+    "date": "2026-07-03",
+    "time": "15:15"
+  },
+  {
+    "word": "derive",
+    "meaning": "obtain something from a specified source, or trace a logic path",
+    "date": "2026-07-03",
+    "time": "16:00"
+  },
+  {
+    "word": "detect",
+    "meaning": "discover or identify the presence or existence of an anomaly",
+    "date": "2026-07-06",
+    "time": "09:10"
+  },
+  {
+    "word": "devise",
+    "meaning": "plan or invent a complex procedure or system with careful thought",
+    "date": "2026-07-06",
+    "time": "09:55"
+  },
+  {
+    "word": "direct",
+    "meaning": "control the operations of, manage, or govern the affairs of a project",
+    "date": "2026-07-06",
+    "time": "10:40"
+  },
+  {
+    "word": "document",
+    "meaning": "record something in written, photographic, or other permanent forms",
+    "date": "2026-07-06",
+    "time": "11:25"
+  },
+  {
+    "word": "elicit",
+    "meaning": "evoke or draw out a reaction or data point from someone or something",
+    "date": "2026-07-06",
+    "time": "13:00"
+  },
+  {
+    "word": "enact",
+    "meaning": "put a law or operational change into practice",
+    "date": "2026-07-06",
+    "time": "13:50"
+  },
+  {
+    "word": "endorse",
+    "meaning": "declare one's public approval or official backing of a proposal",
+    "date": "2026-07-06",
+    "time": "14:40"
+  },
+  {
+    "word": "engineer",
+    "meaning": "skillfully arrange, construct, or bring about a complex outcome",
+    "date": "2026-07-06",
+    "time": "15:30"
+  },
+  {
+    "word": "enhance",
+    "meaning": "intensify, increase, or further improve the quality or value of something",
+    "date": "2026-07-06",
+    "time": "16:15"
+  },
+  {
+    "word": "envisage",
+    "meaning": "contemplate or conceive of a possibility or a desirable future state",
+    "date": "2026-07-07",
+    "time": "09:00"
+  },
+  {
+    "word": "establish",
+    "meaning": "set up an organization, system, or set of rules on a permanent basis",
+    "date": "2026-07-07",
+    "time": "09:45"
+  },
+  {
+    "word": "execute",
+    "meaning": "perform or complete a specific technical command or action sequence",
+    "date": "2026-07-07",
+    "time": "10:30"
+  },
+  {
+    "word": "expedite",
+    "meaning": "accelerate the processing of administrative or operational blockers",
+    "date": "2026-07-07",
+    "time": "11:15"
+  },
+  {
+    "word": "explore",
+    "meaning": "inquire into or discuss a subject or system in detail to discover properties",
+    "date": "2026-07-07",
+    "time": "13:05"
+  },
+  {
+    "word": "generate",
+    "meaning": "produce, create, or bring into existence a set of assets or outputs",
+    "date": "2026-07-07",
+    "time": "13:55"
+  },
+  {
+    "word": "govern",
+    "meaning": "conduct the policy, actions, and affairs of an organization or state",
+    "date": "2026-07-07",
+    "time": "14:45"
+  },
+  {
+    "word": "identify",
+    "meaning": "establish or indicate who or what someone or something is",
+    "date": "2026-07-07",
+    "time": "15:30"
+  },
+  {
+    "word": "illuminate",
+    "meaning": "help to clarify or explain a highly complex subject matter",
+    "date": "2026-07-07",
+    "time": "16:10"
+  },
+  {
+    "word": "implement",
+    "meaning": "execute a specific mechanism or structure into an ongoing plan",
+    "date": "2026-07-08",
+    "time": "09:00"
+  },
+  {
+    "word": "incorporate",
+    "meaning": "take in or contain something as part of a whole; include",
+    "date": "2026-07-08",
+    "time": "09:45"
+  }
+]
