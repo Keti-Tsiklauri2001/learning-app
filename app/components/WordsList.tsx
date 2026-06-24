@@ -95,14 +95,11 @@ export default function WordsList() {
   }, [words, activeFilter, startDate, endDate]);
 
   return (
-    <div className="p-4 max-w-6xl mx-auto">
+    <div className=" max-w-6xl mx-auto">
       {/* FILTER CONTROLS BAR */}
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-6 shadow-sm space-y-4">
+      <div className=" p-1 md:p-5 mb-6  w-[340px] md:w-[700px] xl:w-[800px] mx-auto">
         {/* RELATIVE TIME BUTTONS */}
         <div>
-          <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-2">
-            Relative Timeline Filter
-          </label>
           <div className="flex gap-2 flex-wrap">
             {[
               { id: "all", label: "All Time" },
