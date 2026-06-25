@@ -1,8 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Word } from "../types/types";
+import { Word } from "../types/types"; // Note: ensure your Word type aligns or use inline types
 import WordModal from "./WordModal";
+
+// Define the deck structure based on your updated JSON format
+interface LanguageDeck {
+  deck: string;
+  id: number;
+  words: Word[];
+}
 
 type RelativeFilter =
   | "all"
@@ -14,8 +21,12 @@ type RelativeFilter =
   | "2w"
   | "custom";
 
-export default function WordsList() {
-  const [words, setWords] = useState<Word[]>([]);
+interface WordsListProps {
+  languageId?: number; // Prop passed to filter language
+}
+
+export default function WordsList({ languageId = 1 }: WordsListProps) {
+  const [decks, setDecks] = useState<LanguageDeck[]>([]);
   const [selectedWord, setSelectedWord] = useState<Word | null>(null);
 
   // FILTER STATES
@@ -30,9 +41,15 @@ export default function WordsList() {
         if (!res.ok) throw new Error("Failed to load file");
         return res.json();
       })
-      .then((data) => setWords(data))
+      .then((data) => setDecks(data))
       .catch((err) => console.error(err));
   }, []);
+
+  // Extract words belonging only to the selected language deck
+  const wordsForSelectedLanguage = useMemo(() => {
+    const activeDeck = decks.find((d) => d.id === languageId);
+    return activeDeck ? activeDeck.words : [];
+  }, [decks, languageId]);
 
   // Helper: Convert word date + time → real Date object
   function getWordDate(word: Word) {
@@ -47,7 +64,7 @@ export default function WordsList() {
     const hourMs = 1000 * 60 * 60;
     const dayMs = hourMs * 24;
 
-    return words.filter((word) => {
+    return wordsForSelectedLanguage.filter((word) => {
       const wordDate = getWordDate(word);
       const diffMs = now.getTime() - wordDate.getTime();
 
@@ -73,7 +90,6 @@ export default function WordsList() {
           return diffMs >= 0 && diffMs <= hourMs * 2;
 
         case "today":
-          // Check if it's the exact same calendar day as 'now'
           return wordDate.toDateString() === now.toDateString();
 
         case "yesterday": {
@@ -92,7 +108,16 @@ export default function WordsList() {
           return true;
       }
     });
-  }, [words, activeFilter, startDate, endDate]);
+  }, [wordsForSelectedLanguage, activeFilter, startDate, endDate]);
+
+  // State mutators updated to maintain nested structure
+  const updateWordsInDeck = (updatedWords: Word[]) => {
+    setDecks((prevDecks) =>
+      prevDecks.map((d) =>
+        d.id === languageId ? { ...d, words: updatedWords } : d,
+      ),
+    );
+  };
 
   return (
     <div className=" max-w-6xl mx-auto">
@@ -126,7 +151,7 @@ export default function WordsList() {
           </div>
         </div>
 
-        {/* MANUAL DATE RANGE CONTROLS (Only shows if "Custom Range" is clicked) */}
+        {/* MANUAL DATE RANGE CONTROLS */}
         {activeFilter === "custom" && (
           <div className="pt-3 border-t border-gray-200 flex flex-wrap items-end gap-4 animate-in fade-in duration-200">
             <div className="flex flex-col gap-1">
@@ -209,13 +234,15 @@ export default function WordsList() {
           word={selectedWord}
           onClose={() => setSelectedWord(null)}
           onDelete={(id) => {
-            setWords((prev) => prev.filter((w) => w.id !== id));
+            const updated = wordsForSelectedLanguage.filter((w) => w.id !== id);
+            updateWordsInDeck(updated);
             setSelectedWord(null);
           }}
           onSave={(updatedWord) => {
-            setWords((prev) =>
-              prev.map((w) => (w.id === updatedWord.id ? updatedWord : w)),
+            const updated = wordsForSelectedLanguage.map((w) =>
+              w.id === updatedWord.id ? updatedWord : w,
             );
+            updateWordsInDeck(updated);
             setSelectedWord(updatedWord);
           }}
         />
