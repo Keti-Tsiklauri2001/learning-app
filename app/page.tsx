@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import WordsList from "./components/WordsList";
+import CreateDeckModal from "./components/CreteDeckModal";
+import EditDeckModal from "./components/EditDeckModal";
+import DeleteDeckModal from "./components/DeleteDeckModal";
 
 interface Word {
   id: number;
@@ -22,9 +25,10 @@ export default function DecksPage() {
   const [selectedDeckId, setSelectedDeckId] = useState<number | null>(null);
 
   // Modals / Action states
-  const [isEditing, setIsEditing] = useState<number | null>(null);
-  const [deckNameInput, setDeckNameInput] = useState("");
   const [isCreating, setIsCreating] = useState(false);
+  const [isEditing, setIsEditing] = useState<number | null>(null);
+  const [deckToDelete, setDeckToDelete] = useState<LanguageDeck | null>(null);
+  const [deckNameInput, setDeckNameInput] = useState("");
 
   // Load baseline JSON
   useEffect(() => {
@@ -40,7 +44,7 @@ export default function DecksPage() {
     if (!deckNameInput.trim()) return;
 
     const newDeck: LanguageDeck = {
-      id: Date.now(), // safe runtime ID allocation
+      id: Date.now(),
       deck: deckNameInput,
       words: [],
     };
@@ -51,21 +55,24 @@ export default function DecksPage() {
   };
 
   // UPDATE DECK NAME
-  const handleRenameDeck = (id: number) => {
-    if (!deckNameInput.trim()) return;
+  const handleRenameDeck = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!deckNameInput.trim() || isEditing === null) return;
+
     setDecks(
-      decks.map((d) => (d.id === id ? { ...d, deck: deckNameInput } : d)),
+      decks.map((d) =>
+        d.id === isEditing ? { ...d, deck: deckNameInput } : d,
+      ),
     );
     setIsEditing(null);
     setDeckNameInput("");
   };
 
-  // DELETE DECK
-  const handleDeleteDeck = (id: number, e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevents entering the deck route when deleting
-    if (confirm("Are you sure you want to delete this language deck?")) {
-      setDecks(decks.filter((d) => d.id !== id));
-    }
+  // CONFIRM DELETE DECK FROM MODAL
+  const confirmDeleteDeck = () => {
+    if (!deckToDelete) return;
+    setDecks(decks.filter((d) => d.id !== deckToDelete.id));
+    setDeckToDelete(null);
   };
 
   // If a deck is clicked, render the inner word inspector view
@@ -91,51 +98,20 @@ export default function DecksPage() {
     <div className="max-w-5xl mx-auto p-6">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Language Decks</h1>
-          <p className="text-gray-500 text-sm mt-1">
-            Select or manage your collection review sets.
-          </p>
+          <h1 className="text-xl md:text-3xl font-bold text-gray-900">
+            Language Decks
+          </h1>
         </div>
         <button
           onClick={() => {
             setIsCreating(true);
             setDeckNameInput("");
           }}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 cursor-pointer rounded-xl shadow-sm transition"
         >
           + Create New Deck
         </button>
       </div>
-
-      {/* CREATE FORM OVERLAY / INLINE ENTRY */}
-      {isCreating && (
-        <form
-          onSubmit={handleCreateDeck}
-          className="bg-gray-50 p-4 rounded-xl border border-gray-200 mb-6 flex gap-3 items-center"
-        >
-          <input
-            type="text"
-            placeholder="Deck Name (e.g. German, Medical Vocabulary)"
-            value={deckNameInput}
-            onChange={(e) => setDeckNameInput(e.target.value)}
-            className="flex-1 p-2 border border-gray-300 rounded-lg bg-white text-sm focus:ring-2 focus:ring-blue-500 outline-none"
-            autoFocus
-          />
-          <button
-            type="submit"
-            className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg font-medium"
-          >
-            Save
-          </button>
-          <button
-            type="button"
-            onClick={() => setIsCreating(false)}
-            className="text-gray-500 text-sm hover:underline"
-          >
-            Cancel
-          </button>
-        </form>
-      )}
 
       {/* DECKS GRID DISPLAY */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -146,35 +122,10 @@ export default function DecksPage() {
             className="group relative bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition cursor-pointer flex flex-col justify-between min-h-[140px]"
           >
             <div>
-              {isEditing === deck.id ? (
-                <div
-                  className="flex gap-2"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <input
-                    type="text"
-                    value={deckNameInput}
-                    onChange={(e) => setDeckNameInput(e.target.value)}
-                    className="border p-1 text-sm rounded w-full"
-                  />
-                  <button
-                    onClick={() => handleRenameDeck(deck.id)}
-                    className="text-xs text-green-600 font-bold"
-                  >
-                    Save
-                  </button>
-                  <button
-                    onClick={() => setIsEditing(null)}
-                    className="text-xs text-gray-400"
-                  >
-                    X
-                  </button>
-                </div>
-              ) : (
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">
-                  {deck.deck}
-                </h3>
-              )}
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">
+                {deck.deck}
+              </h3>
+
               <p className="text-xs text-gray-400 mt-1 font-mono">
                 📦 {deck.words?.length || 0} vocabulary entries
               </p>
@@ -195,7 +146,7 @@ export default function DecksPage() {
                 Rename
               </button>
               <button
-                onClick={(e) => handleDeleteDeck(deck.id, e)}
+                onClick={() => setDeckToDelete(deck)}
                 className="text-xs text-red-500 hover:text-red-700 font-medium"
               >
                 Delete
@@ -204,6 +155,33 @@ export default function DecksPage() {
           </div>
         ))}
       </div>
+
+      {/* MODALS MOUNT PORTS */}
+      {isCreating && (
+        <CreateDeckModal
+          handleCreateDeck={handleCreateDeck}
+          deckNameInput={deckNameInput}
+          setDeckNameInput={setDeckNameInput}
+          setIsCreating={setIsCreating}
+        />
+      )}
+
+      {isEditing !== null && (
+        <EditDeckModal
+          handleRenameDeck={handleRenameDeck}
+          deckNameInput={deckNameInput}
+          setDeckNameInput={setDeckNameInput}
+          setIsEditing={setIsEditing}
+        />
+      )}
+
+      {deckToDelete && (
+        <DeleteDeckModal
+          deckName={deckToDelete.deck}
+          onConfirm={confirmDeleteDeck}
+          onCancel={() => setDeckToDelete(null)}
+        />
+      )}
     </div>
   );
 }
