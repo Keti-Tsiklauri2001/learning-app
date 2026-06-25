@@ -39,13 +39,13 @@ export default function CreateDeckModal({
           <button
             type="button"
             onClick={() => setIsCreating(false)}
-            className="text-gray-700 bg-gray-100 hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="text-gray-700 cursor-pointer bg-gray-100 hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="bg-[#0364a4] hover:bg-blue-800 cursor-pointer text-white text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             Create Deck
           </button>

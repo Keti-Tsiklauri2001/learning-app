@@ -107,7 +107,7 @@ export default function DecksPage() {
             setIsCreating(true);
             setDeckNameInput("");
           }}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 cursor-pointer rounded-xl shadow-sm transition"
+          className="bg-[#065386] hover:bg-[#0364a4] text-white text-sm font-semibold px-4 py-2.5 cursor-pointer rounded-xl shadow-sm transition"
         >
           + Create New Deck
         </button>
@@ -122,7 +122,7 @@ export default function DecksPage() {
             className="group relative bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition cursor-pointer flex flex-col justify-between min-h-[140px]"
           >
             <div>
-              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#0364a4] transition">
                 {deck.deck}
               </h3>
 
@@ -141,13 +141,13 @@ export default function DecksPage() {
                   setIsEditing(deck.id);
                   setDeckNameInput(deck.deck);
                 }}
-                className="text-xs text-gray-500 hover:text-blue-600 font-medium"
+                className="text-xs cursor-pointer text-gray-500 hover:text-blue-600 font-medium"
               >
                 Rename
               </button>
               <button
                 onClick={() => setDeckToDelete(deck)}
-                className="text-xs text-red-500 hover:text-red-700 font-medium"
+                className="text-xs text-red-500 hover:text-red-700 font-medium cursor-pointer"
               >
                 Delete
               </button>

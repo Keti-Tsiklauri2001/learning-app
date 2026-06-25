@@ -38,13 +38,13 @@ export default function EditDeckModal({
           <button
             type="button"
             onClick={() => setIsEditing(null)}
-            className="text-gray-700 bg-gray-100 hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="text-gray-700 bg-gray-100 cursor-pointer hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="bg-[#03a43b] cursor-pointer hover:bg-[#036732] text-white text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             Save Changes
           </button>

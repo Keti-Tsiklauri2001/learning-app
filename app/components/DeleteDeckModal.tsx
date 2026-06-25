@@ -28,13 +28,13 @@ export default function DeleteDeckModal({
         <div className="flex justify-end gap-2 mt-2">
           <button
             onClick={onCancel}
-            className="text-gray-700 bg-gray-100 hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="text-gray-700 cursor-pointer bg-gray-100 hover:bg-gray-200 text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             No, Keep It
           </button>
           <button
             onClick={onConfirm}
-            className="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-lg font-medium transition"
+            className="bg-red-600 hover:bg-red-700 cursor-pointer text-white text-sm px-4 py-2 rounded-lg font-medium transition"
           >
             Yes, Delete
           </button>
