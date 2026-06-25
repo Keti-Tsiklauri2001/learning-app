@@ -5,3 +5,8 @@ export type Word = {
   date: string;
   time: string;
 };
+export type Deck = {
+  id: number;
+  deck: string;
+  words: Word[];
+};

@@ -20,7 +20,7 @@ export default function DeleteDeckModal({
           </h3>
           <p className="text-sm text-gray-600 mt-2">
             Are you sure you want to permanently discard{" "}
-            <span className="font-semibold text-gray-900">"{deckName}"</span>?
+            <span className="font-semibold text-gray-900">{deckName}</span>?
             This will wipe out all tracking indexes located inside.
           </p>
         </div>
